@@ -1,0 +1,158 @@
+@import "grid-float.less";
+@import "grid-helpers.less";
+
+.wrap-all {
+    .container();
+    max-width: 960px;
+}
+
+.row {
+    .row();
+}
+
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+ 
+.site-logo-text {
+    .column(16);
+    .push(1);
+}
+
+.profile {
+    .column(6);
+}
+
+.flash-wrap {
+    .column(24);
+}
+
+
+/** --------------------------------------------------------------
+ *  Main
+ */
+
+.route-grid .wrap-all {
+    .showGrid(960px);
+}
+
+/*.route-report .wrap-all, .route-report-kmom01 .wrap-all {
+    .showGrid(960px);
+}*/
+
+.breadcrumb-wrap {
+    .column(22);
+    .push(1);
+}
+
+.main, .has-sidebar-right, .sidebar-right, .has-sidebar-left, .sidebar-left, .after-main {
+    .column(22);
+    .push(1);
+}
+
+.next {
+    .column(16);
+    .push(1);
+}
+
+.previous {
+    .column(6);
+    .push(1);
+}
+
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+
+.footer-column-1, .footer-column-2, .footer-column-3 {
+    .column(20);
+    .push(2);
+}
+
+.site-footer {
+    .column(24);
+}
+
+
+
+/** --------------------------------------------------------------
+ *  Media Queries
+ */
+ 
+@media screen and (min-width: 620px) {
+
+.footer-column-1, .footer-column-3 {
+    .column(6);
+    .push(1);
+}
+.footer-column-2 {
+    .column(7);
+    .push(1);
+}
+
+}
+
+
+@media screen and (min-width: 640px) {
+
+.has-sidebar-left, .next {
+    .column(17);
+    .push(1);
+}
+.sidebar-left, .previous {
+    .column(4);
+    .push(1);
+}
+
+}
+
+
+@media screen and (min-width: 760px) {
+
+.site-logo-text {
+    .column(11);
+    .push(1);
+}
+
+.navbar2 {
+    .column(11);
+}
+
+.has-sidebar-right {
+    .column(14);
+    .push(1);
+}
+
+.sidebar-right {
+    .column(7);
+    .push(1);
+}
+
+.route-typography .has-sidebar-right {
+    .column(22);
+    .push(1);
+}
+
+.route-typography .sidebar-right {
+    .column(22);
+    .push(1);
+}
+
+}
+
+
+@media screen and (min-width: 840px) {
+
+.route-typography .has-sidebar-right {
+    .column(14);
+    .push(1);
+}
+
+.route-typography .sidebar-right {
+    .column(7);
+    .push(1);
+}
+
+}

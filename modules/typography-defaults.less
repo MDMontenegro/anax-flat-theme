@@ -1,0 +1,381 @@
+/**
+ * Typographic defaults.
+ */
+ 
+//@magicNumber:   24px;
+
+
+/**
+ * Headings
+ */
+.typographyHeadings() {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: @fontFamilyHeadings;
+        margin-top: @magicNumber;
+        margin-bottom: @magicNumber;
+        img {
+            margin: 0;
+        }
+    }
+
+    h1 {
+        .fontSize(@fontSizeH1);
+        font-weight: normal;
+
+        margin-bottom: @magicNumber;
+
+        // If header below h1, then assume larger margin top
+        & ~ h1,
+        & ~ h2,
+        & ~ h3,
+        & ~ h4,
+        & ~ h5,
+        & ~ h6,
+         {
+            margin-top: @magicNumber * 2;
+        }
+
+        // Single margin when subheader follows directly
+        & + h2 {
+            margin-top: @magicNumber;
+        }
+    }
+
+    h2 {
+        .fontSize(@fontSizeH2);
+        font-weight: normal;
+
+        margin-top: @magicNumber * 2;
+        margin-bottom: @magicNumber;
+
+        & + h3 {
+            margin-top: @magicNumber;
+        }
+    }
+
+    h3 {
+        .fontSize(@fontSizeH3);
+        font-weight: normal;
+    }
+
+    h4 {
+        .fontSize(@fontSizeH4);
+        font-weight: normal;
+    }
+
+    h5 {
+        .fontSize(@fontSizeH5);
+    }
+
+    h6 {
+        .fontSize(@fontSizeH6);
+    }
+}
+
+
+
+/**
+ * Text elements
+ */
+@colorTypographyMark: #000;
+@bgColorTypographyMark:  #ffff99;
+
+@colorBlockquoteBorder: #eee;
+@sizeBlockquoteBorder: 4px;
+
+.typographyTextElements() {
+    p { 
+        margin-top: @magicNumber;
+        margin-bottom: @magicNumber;
+    }
+
+    small,
+    .small,
+    .smaller {
+        font-size: @fontSizeSmall; 
+    }
+
+    strong,
+    b {
+        font-weight: bold;
+    }
+
+    mark {
+        color: @colorTypographyMark;
+        background-color: @bgColorTypographyMark;
+    }
+
+    abbr[title],
+    dfn[title] {
+        text-decoration: dotted underline;
+    }
+
+    em,
+    i,
+    dfn {
+        font-style: italic;
+    }
+
+    sub,
+    sup {
+        font-size: @fontSizeSupSub;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+
+    sup {
+        top: -0.5em;
+    }
+
+    sub {
+        bottom: -0.25em;
+    }
+
+    blockquote {
+        border-left: @sizeBlockquoteBorder solid @colorBlockquoteBorder;
+        padding-left: 1em;
+        margin-left: 0;
+        margin-bottom: @magicNumber;
+    }
+}
+
+
+
+/**
+ * Display source code.
+ */
+@borderColorCodeInline: #ccc;
+@bgColorCodeInline:     #eee;
+@bgColorCodeBlock:      #eee;
+@colorCodeBlockBorder:  #ccc;
+@borderSizeCodeblock:   1px;
+
+.typographyCodeElements() {
+    pre,
+    code,
+    kbd,
+    samp,
+    .code {
+        font-size: @fontSizeCodeInline;
+        font-family: @fontFamilyMonospace;
+    }
+    
+    p code, p kbd, p samp {
+        line-height: 1.2;
+    }
+    code,
+    samp {
+        border: 1px solid @borderColorCodeInline;
+    }
+
+    code {
+        background-color: @bgColorCodeInline;
+        width: 100%;
+    }
+
+    pre,
+    div.code,
+    pre code {
+        font-size: @fontSizeCodeBlock;
+        line-height: @lineHeightCodeBlock;
+    }
+
+    pre {
+        margin-top: @magicNumber;
+        margin-bottom: @magicNumber;
+        white-space: pre;
+    }
+
+    pre code {
+        display: block;
+        overflow: auto;
+    }
+
+    div.code,
+    body code,
+    body samp,
+    pre code {
+        border-top:    @borderSizeCodeblock solid @colorCodeBlockBorder;
+        border-bottom: @borderSizeCodeblock solid @colorCodeBlockBorder;
+
+        margin-top:    @magicNumber - @borderSizeCodeblock;
+        margin-bottom: @magicNumber - @borderSizeCodeblock;
+
+        padding-top:    (@magicNumber / 2) - 1;
+        padding-bottom: (@magicNumber / 2) - 1;
+        padding-left: 0.5em;
+
+        background-color: @bgColorCodeBlock;
+    }
+}
+
+
+
+/**
+ * Lists
+ */
+.typographyListElements() {
+    //ul,ol{margin:0.6875em 1.5em 1.375em 0;padding-left:1.5em;}
+
+    ul, 
+    ol {
+        margin-top:    @magicNumber;
+        margin-bottom: @magicNumber;
+        padding-left: 1.5em;
+
+        p { 
+            margin-top:    @magicNumber / 2;
+            margin-bottom: @magicNumber / 2;
+        }
+
+        & ul,
+        & ol {
+            margin: 0;
+        }
+    }
+
+    ul {
+          list-style-type: disc;
+    }
+
+    ol {
+          list-style-type: decimal;
+    }
+
+    // dl dt dd
+    dl {
+        margin-top:    @magicNumber;
+        margin-bottom: @magicNumber;
+
+        &.horizontal {
+            @margin: 7em;
+
+            dt {
+                clear: left;
+                float: left;
+                width: @margin
+            } 
+
+            dd {
+                margin-left: @margin + 1em;
+                display:block;
+            } 
+        }
+    }
+
+    dt { 
+        //font-weight: bold;
+    }
+
+    dd { 
+        margin-left: 1.5em;
+    }
+}
+
+
+
+/**
+ * Tables. Because of the need for padding on TH and TD, the vertical rhythm
+ * on table cells has to be 1.5*@magic-number.
+ */
+@colorTableHeaderBorder:    #aaa;
+@sizeTableHeaderBorder:     2px;
+
+@bgColorTableStripe1:        #f6f6f6;
+@bgColorTableStripe2:        #dfdfdf;
+@colorTableRowBorder:        #ccc;
+
+@colorTableRowHover:        #000;
+@bgColorTableRowHover:      #fbfbfb;
+@colorTableRowBorderHover:  #666;
+
+.typographyTableElements() {
+    table {
+        margin-top:    @magicNumber;
+        margin-bottom: @magicNumber;
+    }
+
+    table.full-width {
+        width: 100%;
+    }
+
+    // A more styled table layout
+    table { 
+        border-collapse: collapse;
+
+        caption { 
+            .fontSize(@fontSizeSmall);
+            text-align: left;
+            font-style: italic;
+        }
+        th {
+            vertical-align: bottom;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        th, td {
+            padding-top: @magicNumber / 2;
+            padding-bottom: @magicNumber / 2;
+        }
+        td {
+            padding-left: @magicNumber / 4;
+            padding-right: @magicNumber / 4;
+        }
+
+        tr {
+            &:hover {
+                color: @colorTableRowHover;
+                background-color: @bgColorTableRowHover;
+            }
+        }
+
+        tfoot {
+            
+        }
+    }
+
+    // Stripe each even row in table
+    table.striped {
+        tbody {
+            tr:nth-child(even) td,
+            tr.even td {
+                background-color: @bgColorTableStripe1;
+            }
+            tr:nth-child(odd) td,
+            tr.odd td {
+                background-color: @bgColorTableStripe2;
+            }
+        }
+    }
+}
+
+
+
+/**
+ * More typography elements
+ */
+@bgColorHr: #fff;
+
+.typographyOtherElements() {
+    hr {
+        position: relative;
+        top: -2px;
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+ 
+        margin-top: 1.5 * @magicNumber - 1px;
+        margin-bottom: 1.5 * @magicNumber;
+
+        &:after {
+            content: "§";
+            position: relative;
+            top: -0.7em;
+            left: 50%;
+            padding: 0 0.25em;
+            background-color: @bgColorHr;
+        }
+    }
+}

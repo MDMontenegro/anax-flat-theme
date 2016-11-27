@@ -141,6 +141,31 @@ npm-version:
 	@$(call HELPTEXT,$@)
 	$(NPMBIN)/lessc --version
 	$(NPMBIN)/csslint --version
+
+
+# target: upgrade-grid                - Upgrade LESS modules - Grids
+.PHONY: upgrade-grid
+upgrade: upgrade-grid-float upgrade-grid-flex
+	@$(call HELPTEXT,$@)
+
+
+# target: upgrade-grid-float        - Upgrade LESS module - Grid float
+.PHONY: upgrade-grid-float
+upgrade-grid-float:
+	@$(call HELPTEXT,$@)
+    
+    # Grid float
+    wget --quiet https://github.com/dbwebb-se/design/blob/master/example/grid/fluid/less/grid-float.less -O $(LESS_MODULES)/grid-float.less
+    
+    
+# target: upgrade-grid-flex        - Upgrade LESS module - Grid flex
+.PHONY: upgrade-grid-flex
+upgrade-grid-flex:
+	@$(call HELPTEXT,$@)
+    
+    # Grid flex
+    wget --quiet https://github.com/dbwebb-se/design/blob/master/example/grid/fluid/less/grid-flex.less -O $(LESS_MODULES)/grid-flex.less
+    
     
 
 # target: upgrade                 - Upgrade external LESS modules.

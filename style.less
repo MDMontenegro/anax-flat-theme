@@ -3,17 +3,19 @@
 */
 @import url(modules.less);
 
+/***  @magicNumberLayout, bas mått som layouten är byggd efter ***/
+/***  @magicNumber används i typografin ***/
+//@magicNumber:   24px;
+@magicNumberLayout: 1.5em; // samma som 24px
+
+
 body {
     background-color: #fff;
     color: #444;
 }
 
-div, p {
-    margin: 0;
-    padding: 0;
-    p {
-        padding: 0.5em 0 0.75em;
-    }
+.wrap-all ul {
+    list-style-type: none;
 }
 
 @linkColor: #80A59A;
@@ -29,20 +31,7 @@ a {
     &:hover {
         color: @linkHoverColor;
         text-decoration: underline;
-    }
-    
-}
-
-h6, h5 {
-    margin: 0.5em 0 0.25em;
-}
-        
-h4, h3 {
-    margin: 0.65em 0 0.35em;
-}
-
-h2, h1 {
-    margin: 0.8em 0 0.45em;
+    } 
 }
 
 
@@ -52,29 +41,33 @@ h2, h1 {
  */
 
 .site-header {
-    height: 40px;
-    padding: 0.5em;
-    padding-top: 1em;
+    height: @magicNumberLayout * 2;
+    padding-top: @magicNumberLayout;
 }
 .site-logo-text {
     float: left;
-    width: 49%;
-    .profile {
+    /*.profile {
         text-align: right;
-    }
+    }*/
 }
 
 .site-logo-text {
     font-weight: 300;
-    font-size: 2em;
+    font-size: 2.375em;
+    line-height: 1.2632;
     a {
         color: #000;
         text-decoration: none;
     }
 }
 
+.rm-max.rm-navbar {
+    top: 1.625em;
+    
+}
+
 @maxButtonColor: #000;
-@maxButtonFontSize: 1.75em;
+@maxButtonFontSize: 2em;
 @navbarMenuButtonClickedColor: #80a59a;
 @maxBgColor: #F9F9F9;
 
@@ -82,6 +75,10 @@ h2, h1 {
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
     li {
         box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+        a {
+            padding-left: 2em;
+    
+        }
     }
 }
 
@@ -92,7 +89,7 @@ h2, h1 {
 .flash-wrap {
     background-color: #80a59a;
     text-align: center;
-    height: 120px;
+    height: 119px;
     img {
         padding-top: 10px;
         width: 200px;
@@ -107,8 +104,19 @@ h2, h1 {
  */
 
 .breadcrumb-list {
-    padding: 0.75em;
-    font-size: 0.85em;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+    
+    li {
+        display: inline;
+
+        &::after {
+            content: " » ";
+        }
+    }
 }
 
 
@@ -118,12 +126,9 @@ h2, h1 {
  */
 
 .main, .after-main, .sidebar {
-    margin: 0.5em 0;
-    padding: 0.5em;
-    line-height: 1.25;
-    
+    padding-top: @magicNumberLayout;
     img {
-        max-width: 300px;
+        max-width: 260px;
         padding: 0;
         margin: 0 auto;
     }
@@ -131,8 +136,10 @@ h2, h1 {
 
 .next-previous {
     width: auto;
-    margin: 0.75em 0;
+    height: @magicNumberLayout;
+    margin-top: @magicNumberLayout;
 }
+
 .toc {
     display: none;
 }
@@ -145,43 +152,41 @@ h2, h1 {
  */
 
 .footer {
-    margin-top: 4em;
-    padding-top: 1em;
+    margin-top: @magicNumberLayout * 2;
+    padding-top: 22px;
     border-top: 2px solid #eee;
-}
-.site-footer {
-    background-color: #eee;
-    margin-top: 1em;
-    padding: 0.75em 0 1.25em;
-    ul li {
-       padding: 0 0.5em; 
-    }
-}
-
-.footer-column-wrapper {
-    width: 80%;
-    margin: 0 auto;
 }
 
 .footer-column {
     ul {
-        margin: 0;
-        padding: 0;
-        padding-left: 0.5em;
-        list-style-type: none;
-        li {
-            margin: 0.5em 0;
-        }
+        list-style-type: square;
     }
 }
 
-.footer-column-x {
-    text-align: left;
-    padding: 0 0.5em;
+.site-footer {
+    text-align: center;
+    padding-bottom: @magicNumberLayout;
+    background-color: #eee;
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-type: none;
+    }
+
+    li {
+        display: inline;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+    }
 }
 
 
 
+/** --------------------------------------------------------------
+ *  Media Queries
+ */
+ 
 @media screen and (min-width: 610px) {
 
 .toc {
@@ -189,22 +194,13 @@ h2, h1 {
     list-style-type: none;
 }
 
-.footer-column-wrapper {
-    width: 100%;
-    margin: 0 auto;
 }
 
-.footer-column {
-    width: 32%;
-    margin: 0 0.25em;
-}
-
-}
 
 @media screen and (min-width: 640px) {
 
 .flash-wrap {
-    height: 140px;
+    height: 143px;
     img {
         padding-top: 10px;
         width: 260px;
@@ -212,45 +208,50 @@ h2, h1 {
     }
 }
 
-.main, .after-main, .sidebar {
-    margin: 1em 0;
-    padding: 1em;
-}
-
-.footer-column-1 {
-    padding-left: 1em;
-}
-
 }
 
 @media screen and (min-width: 760px) {
 
-.site-logo-text {
-    padding-top: 0.2em;
+.site-header {
+    height: @magicNumberLayout * 3;
 }
 
 .rm-navbar-max {
     display: none;
 }
+
 .navbar2 {
     text-align: right;
     display: block;
-    width: 49%;
-    float: right;
+    float: left;
+    height: @magicNumberLayout * 2;
+    padding-top: 16px;
+}
+
+.rm-desktop ul {
+    margin: 0;
+    padding: 0;
 }
 
 .rm-desktop li a {
     font-weight: 300;
+    line-height: 1.3333;
     text-transform: uppercase;
     color: @linkColor;
     &:hover {
        color: @linkHoverColor;
     }
 }
+.rm-default a {
+    padding: 0 1.5em 0 0;  
+}
+.rm-default li:last-child a {
+    padding-right: 0;
+}
 
 .flash-wrap {
     clear: both;
-    height: 160px;
+    height: 167px;
     img {
         padding-top: 10px;
         width: 300px;
@@ -258,29 +259,20 @@ h2, h1 {
     }
 }
 
+.main, .sidebar {
+    padding-top: @magicNumberLayout * 2;
 }
 
-@media screen and (min-width: 960px) {
+.sidebar-right p {    
+    img {
+        margin-top: @magicNumberLayout * 2;
+        width: 100%;
+    }
+}
 
-.main {
-    display: inline-block;
-    width: 60%;
-    float: left;
-    margin-right: 1em;
-    
-}
-.sidebar-right {
-    display: inline-block;
-    width: 30%;
-    float: right;
-}
-.sidebar-left {
-    display: inline-block;
-    width: 30%;
-    float: left;
-}
-.after-main {
-    clear: both;
+.footer {
+    margin-top: @magicNumberLayout * 3;
 }
 
 }
+

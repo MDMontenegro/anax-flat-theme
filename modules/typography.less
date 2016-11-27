@@ -1,0 +1,25 @@
+@import "typography-font-families.less";
+@import "typography-sizes.less";
+@import "typography-mixins.less";
+@import "typography-defaults.less";
+
+body {
+    .font(@fontSizeBody);
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+}
+
+.route-typography .wrap-all {
+    background-image: url(../img/grid/horisontal-grid-24.png);
+    background-repeat: repeat;
+    
+}
+/*.route-report, .route-report-kmom01, .route-grid {
+    background-image: url(../img/grid/horisontal-grid-24-2.png);
+    background-repeat: repeat;
+    z-index: 2;
+}*/

@@ -415,76 +415,6 @@ template {
   display: none;
 }
 /**
- * Regions, basics to show off the regions.
- */
-.wrap-all {
-  margin: 0 auto;
-  max-width: 950px;
-}
-.site-header {
-  position: relative;
-}
-.breadcrumb-list {
-  /*margin-bottom: 22px;*/
-}
-.breadcrumb-list ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-.breadcrumb-list li {
-  display: inline;
-}
-.breadcrumb-list li::after {
-  content: " » ";
-}
-.sidebar {
-  /*width: 33%;*/
-  width: 100%;
-  float: left;
-}
-.main .has-sidebar {
-  /*width: 67%;*/
-  width: 100%;
-  float: left;
-}
-.next-previous .next,
-.next-previous .previous {
-  width: 50%;
-}
-.next-previous .next {
-  float: right;
-  text-align: right;
-}
-.outer-wrap-footer {
-  clear: both;
-  /*margin-bottom: 22px;*/
-}
-.site-footer {
-  text-align: center;
-}
-.site-footer ul {
-  margin: 0;
-  padding: 0;
-  list-type: none;
-}
-.site-footer li {
-  display: inline;
-}
-.footer-column {
-  float: left;
-  /*width: 33%;*/
-  width: 100%;
-}
-.footer-column-wrapper {
-  overflow: auto;
-}
-.footer-column ul {
-  margin: 0;
-  padding: 1em;
-  /*list-style-type: circle;*/
-}
-/**
  * Style for responsive menu
  */
 /**
@@ -645,7 +575,7 @@ a.rm-button.rm-clicked .rm-button-face-2 {
   display: block;
 }
 .rm-max .rm-small .rm-button {
-  font-size: 1.75em;
+  font-size: 2em;
   color: #000;
 }
 .rm-max .rm-small .rm-button.rm-clicked {
@@ -711,18 +641,644 @@ a.rm-button.rm-clicked .rm-button-face-2 {
 .rm-max.rm-swipe-right .rm-mobile {
   right: 0;
 }
+/*// Grid with flex box
+@import url(grid-flex.less);*/
+/**
+ * Show grid.
+ */
+/**
+ * Responsive Grid
+ */
+/**
+ * A small clearfix:
+ * http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use
+ */
+/**
+ * Wrap grid in a container.
+ */
+/**
+ * All columns must be wrapped in a row.
+ */
+/**
+ * Create a column spanning @col columns.
+ */
+/**
+ * Push a column @offset columns.
+ */
+/**
+ * Pull a column left @offset columns.
+ */
+/**
+ * Pull a column right @offset columns.
+ */
+/**
+ * Typographic font families to choose from. 
+ */
+/**
+ * Default font-families
+ */
+/**
+ * Typographic sizes for horisontal rythm. 
+ */
+/**
+ * Magic number for vertical rythm
+ * @magicNumber = @fontSizeBody * @lineHeight
+ */
+/* 16px - 100%/1.5 */
+/**
+ * Size and lineheight calculation for magicNumber 24
+ *
+ * 3em     * 16px   = 48 => line-height: 48    = 1
+ * 2.875em * 16px   = 46 => line-height: 48/44 = 1.0435
+ * 2.75em  * 16px   = 44 => line-height: 48/44 = 1.0909
+ * 2.625em * 16px   = 42 => line-height: 48/42 = 1.1429
+ * 2.5em   * 16px   = 40 => line-height: 48/40 = 1.2
+ * 2.375em * 16px   = 38 => line-height: 48/38 = 1.2632
+ * 2.25em  * 16px   = 36 => line-height: 48/36 = 1.3333
+ * 2.125em * 16px   = 34 => line-height: 48/34 = 1.4118
+ * 2em     * 16px   = 32 => line-height: 48/32 = 1.5
+ * 1.875em * 16px   = 30 => line-height: 48/30 = 1.6
+ * 1.75em  * 16px   = 28 => line-height: 48/28 = 1.7143
+ * 1.625em * 16px   = 26 => line-height: 48/26 = 1.8462
+ * 1.5em   * 16px   = 24 => line-height: 24    = 1
+ * 1.375em * 16px   = 22 => line-height: 24/22 = 1.0909
+ * 1.25em  * 16px   = 20 => line-height: 24/20 = 1.2
+ * 1.125em * 16px   = 18 => line-height: 24/18 = 1.3333
+ * 1em     * 16px   = 16 => line-height: 24/16 = 1.5
+ * 0.875em * 16px   = 14 => line-height: 24/14 = 1.7143
+ * 0.75em  * 16px   = 12 => line-height: 24/12 = 2
+ */
+/**
+ * Size and lineheight calculation for magicNumber 22
+ *
+ * 3em     * 16px   = 48 => line-height: 66/48 = 1.375
+ * 2.875em * 16px   = 46 => line-height: 66/46 = 1.4348
+ * 2.75em  * 16px   = 44 => line-height: 44    = 1
+ * 2.625em * 16px   = 42 => line-height: 44/42 = 1.0476
+ * 2.5em   * 16px   = 40 => line-height: 44/40 = 1.1
+ * 2.375em * 16px   = 38 => line-height: 44/38 = 1.1579
+ * 2.25em  * 16px   = 36 => line-height: 44/36 = 1.2222
+ * 2.125em * 16px   = 34 => line-height: 44/34 = 1.2941
+ * 2em     * 16px   = 32 => line-height: 44/32 = 1.375
+ * 1.875em * 16px   = 30 => line-height: 44/30 = 1.4667
+ * 1.75em  * 16px   = 28 => line-height: 44/28 = 1.5714
+ * 1.625em * 16px   = 26 => line-height: 44/26 = 1.6923
+ * 1.5em   * 16px   = 24 => line-height: 44/24 = 1.8333
+ * 1.375em * 16px   = 22 => line-height: 22    = 1
+ * 1.25em  * 16px   = 20 => line-height: 22/20 = 1.1
+ * 1.125em * 16px   = 18 => line-height: 22/18 = 1.2222
+ * 1em     * 16px   = 16 => line-height: 22/16 = 1.375
+ * 0.875em * 16px   = 14 => line-height: 22/14 = 1.5714
+ * 0.75em  * 16px   = 12 => line-height: 22/12 = 1.8333
+*/
+/**
+ * Typographic mixins.
+ */
+/**
+ * Typographic defaults.
+ */
+/**
+ * Headings
+ */
+/**
+ * Text elements
+ */
+/**
+ * Display source code.
+ */
+/**
+ * Lists
+ */
+/**
+ * Tables. Because of the need for padding on TH and TD, the vertical rhythm
+ * on table cells has to be 1.5*@magic-number.
+ */
+/**
+ * More typography elements
+ */
+body {
+  font: 16px/1.5 Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+body h1 img,
+body h2 img,
+body h3 img,
+body h4 img,
+body h5 img,
+body h6 img {
+  margin: 0;
+}
+body h1 {
+  font-size: 2.375em;
+  line-height: 1.26315789;
+  font-weight: normal;
+  margin-bottom: 24px;
+}
+body h1 ~ h1,
+body h1 ~ h2,
+body h1 ~ h3,
+body h1 ~ h4,
+body h1 ~ h5,
+body h1 ~ h6 {
+  margin-top: 48px;
+}
+body h1 + h2 {
+  margin-top: 24px;
+}
+body h2 {
+  font-size: 1.875em;
+  line-height: 1.6;
+  font-weight: normal;
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+body h2 + h3 {
+  margin-top: 24px;
+}
+body h3 {
+  font-size: 1.375em;
+  line-height: 1.09090909;
+  font-weight: normal;
+}
+body h4 {
+  font-size: 1.25em;
+  line-height: 1.2;
+  font-weight: normal;
+}
+body h5 {
+  font-size: 1em;
+  line-height: 1.5;
+}
+body h6 {
+  font-size: 0.875em;
+  line-height: 1.71428571;
+}
+body p {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+body small,
+body .small,
+body .smaller {
+  font-size: 0.875em;
+}
+body strong,
+body b {
+  font-weight: bold;
+}
+body mark {
+  color: #000;
+  background-color: #ffff99;
+}
+body abbr[title],
+body dfn[title] {
+  text-decoration: dotted underline;
+}
+body em,
+body i,
+body dfn {
+  font-style: italic;
+}
+body sub,
+body sup {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+body sup {
+  top: -0.5em;
+}
+body sub {
+  bottom: -0.25em;
+}
+body blockquote {
+  border-left: 4px solid #eee;
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 24px;
+}
+body pre,
+body code,
+body kbd,
+body samp,
+body .code {
+  font-size: 1.25em;
+  font-family: monospace;
+}
+body p code,
+body p kbd,
+body p samp {
+  line-height: 1.2;
+}
+body code,
+body samp {
+  border: 1px solid #ccc;
+}
+body code {
+  background-color: #eee;
+  width: 100%;
+}
+body pre,
+body div.code,
+body pre code {
+  font-size: 1.25em;
+  line-height: 1.2;
+}
+body pre {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  white-space: pre;
+}
+body pre code {
+  display: block;
+  overflow: auto;
+}
+body div.code,
+body body code,
+body body samp,
+body pre code {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: 23px;
+  margin-bottom: 23px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 0.5em;
+  background-color: #eee;
+}
+body ul,
+body ol {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding-left: 1.5em;
+}
+body ul p,
+body ol p {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+body ul ul,
+body ol ul,
+body ul ol,
+body ol ol {
+  margin: 0;
+}
+body ul {
+  list-style-type: disc;
+}
+body ol {
+  list-style-type: decimal;
+}
+body dl {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+body dl.horizontal dt {
+  clear: left;
+  float: left;
+  width: 7em;
+}
+body dl.horizontal dd {
+  margin-left: 8em;
+  display: block;
+}
+body dd {
+  margin-left: 1.5em;
+}
+body table {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+body table.full-width {
+  width: 100%;
+}
+body table {
+  border-collapse: collapse;
+}
+body table caption {
+  font-size: 0.875em;
+  line-height: 1.71428571;
+  text-align: left;
+  font-style: italic;
+}
+body table th {
+  vertical-align: bottom;
+  font-weight: bold;
+  text-align: left;
+}
+body table th,
+body table td {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+body table td {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+body table tr:hover {
+  color: #000;
+  background-color: #fbfbfb;
+}
+body table.striped tbody tr:nth-child(even) td,
+body table.striped tbody tr.even td {
+  background-color: #f6f6f6;
+}
+body table.striped tbody tr:nth-child(odd) td,
+body table.striped tbody tr.odd td {
+  background-color: #dfdfdf;
+}
+body hr {
+  position: relative;
+  top: -2px;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  margin-top: 35px;
+  margin-bottom: 36px;
+}
+body hr:after {
+  content: "§";
+  position: relative;
+  top: -0.7em;
+  left: 50%;
+  padding: 0 0.25em;
+  background-color: #fff;
+}
+.route-typography .wrap-all {
+  background-image: url(../img/grid/horisontal-grid-24.png);
+  background-repeat: repeat;
+}
+/*.route-report, .route-report-kmom01, .route-grid {
+    background-image: url(../img/grid/horisontal-grid-24-2.png);
+    background-repeat: repeat;
+    z-index: 2;
+}*/
+.wrap-all {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+}
+.row {
+  display: block;
+  width: 101.04166667%;
+  margin-left: -0.52083333%;
+  margin-right: -0.52083333%;
+}
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+/** --------------------------------------------------------------
+ *  Header
+ */
+.site-logo-text {
+  display: inline;
+  float: left;
+  box-sizing: border-box;
+  width: 65.625%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-left: 4.6875%;
+}
+.profile {
+  display: inline;
+  float: left;
+  box-sizing: border-box;
+  width: 23.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+}
+.flash-wrap {
+  display: inline;
+  float: left;
+  box-sizing: border-box;
+  width: 98.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+}
+/** --------------------------------------------------------------
+ *  Main
+ */
+.route-grid .wrap-all {
+  background: url(../img/grid/grid950x24x30x10-nomargin.png) repeat-y fixed center center;
+  background-size: 100% auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+}
+@media (min-width: 960px) {
+  .route-grid .wrap-all {
+    background-size: 960px auto;
+  }
+}
+/*.route-report .wrap-all, .route-report-kmom01 .wrap-all {
+    .showGrid(960px);
+}*/
+.breadcrumb-wrap {
+  display: inline;
+  float: left;
+  box-sizing: border-box;
+  width: 90.625%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-left: 4.6875%;
+}
+.main,
+.has-sidebar-right,
+.sidebar-right,
+.has-sidebar-left,
+.sidebar-left,
+.after-main {
+  display: inline;
+  float: left;
+  box-sizing: border-box;
+  width: 90.625%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-left: 4.6875%;
+}
+.next {
+  display: inline;
+  float: left;
+  box-sizing: border-box;
+  width: 65.625%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-left: 4.6875%;
+}
+.previous {
+  display: inline;
+  float: left;
+  box-sizing: border-box;
+  width: 23.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-left: 4.6875%;
+}
+/** --------------------------------------------------------------
+ *  Footer
+ */
+.footer-column-1,
+.footer-column-2,
+.footer-column-3 {
+  display: inline;
+  float: left;
+  box-sizing: border-box;
+  width: 82.29166667%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+  margin-left: 8.85416667%;
+}
+.site-footer {
+  display: inline;
+  float: left;
+  box-sizing: border-box;
+  width: 98.95833333%;
+  margin-left: 0.52083333%;
+  margin-right: 0.52083333%;
+}
+/** --------------------------------------------------------------
+ *  Media Queries
+ */
+@media screen and (min-width: 620px) {
+  .footer-column-1,
+  .footer-column-3 {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 23.95833333%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
+  }
+  .footer-column-2 {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 28.125%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
+  }
+}
+@media screen and (min-width: 640px) {
+  .has-sidebar-left,
+  .next {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 69.79166667%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
+  }
+  .sidebar-left,
+  .previous {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 15.625%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
+  }
+}
+@media screen and (min-width: 760px) {
+  .site-logo-text {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 44.79166667%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
+  }
+  .navbar2 {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 44.79166667%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+  }
+  .has-sidebar-right {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 57.29166667%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
+  }
+  .sidebar-right {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 28.125%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
+  }
+  .route-typography .has-sidebar-right {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 90.625%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
+  }
+  .route-typography .sidebar-right {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 90.625%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
+  }
+}
+@media screen and (min-width: 840px) {
+  .route-typography .has-sidebar-right {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 57.29166667%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
+  }
+  .route-typography .sidebar-right {
+    display: inline;
+    float: left;
+    box-sizing: border-box;
+    width: 28.125%;
+    margin-left: 0.52083333%;
+    margin-right: 0.52083333%;
+    margin-left: 4.6875%;
+  }
+}
+/*// Basic region structure
+@import url(regions.less);*/
+/***  @magicNumberLayout, bas mått som layouten är byggd efter ***/
+/***  @magicNumber används i typografin ***/
 body {
   background-color: #fff;
   color: #444;
 }
-div,
-p {
-  margin: 0;
-  padding: 0;
-}
-div p,
-p p {
-  padding: 0.5em 0 0.75em;
+.wrap-all ul {
+  list-style-type: none;
 }
 a {
   text-decoration: none;
@@ -735,40 +1291,30 @@ a:hover {
   color: #DE9B88;
   text-decoration: underline;
 }
-h6,
-h5 {
-  margin: 0.5em 0 0.25em;
-}
-h4,
-h3 {
-  margin: 0.65em 0 0.35em;
-}
-h2,
-h1 {
-  margin: 0.8em 0 0.45em;
-}
 /** --------------------------------------------------------------
  *  Header
  */
 .site-header {
-  height: 40px;
-  padding: 0.5em;
-  padding-top: 1em;
+  height: 3em;
+  padding-top: 1.5em;
 }
 .site-logo-text {
   float: left;
-  width: 49%;
-}
-.site-logo-text .profile {
-  text-align: right;
+  /*.profile {
+        text-align: right;
+    }*/
 }
 .site-logo-text {
   font-weight: 300;
-  font-size: 2em;
+  font-size: 2.375em;
+  line-height: 1.2632;
 }
 .site-logo-text a {
   color: #000;
   text-decoration: none;
+}
+.rm-max.rm-navbar {
+  top: 1.625em;
 }
 .rm-mobile {
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
@@ -776,13 +1322,16 @@ h1 {
 .rm-mobile li {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
+.rm-mobile li a {
+  padding-left: 2em;
+}
 .navbar2 {
   display: none;
 }
 .flash-wrap {
   background-color: #80a59a;
   text-align: center;
-  height: 120px;
+  height: 119px;
 }
 .flash-wrap img {
   padding-top: 10px;
@@ -792,9 +1341,16 @@ h1 {
 /** --------------------------------------------------------------
  *  Breadcrumb
  */
-.breadcrumb-list {
-  padding: 0.75em;
-  font-size: 0.85em;
+.breadcrumb-list ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.breadcrumb-list li {
+  display: inline;
+}
+.breadcrumb-list li::after {
+  content: " » ";
 }
 /** --------------------------------------------------------------
  *  Main
@@ -802,20 +1358,19 @@ h1 {
 .main,
 .after-main,
 .sidebar {
-  margin: 0.5em 0;
-  padding: 0.5em;
-  line-height: 1.25;
+  padding-top: 1.5em;
 }
 .main img,
 .after-main img,
 .sidebar img {
-  max-width: 300px;
+  max-width: 260px;
   padding: 0;
   margin: 0 auto;
 }
 .next-previous {
   width: auto;
-  margin: 0.75em 0;
+  height: 1.5em;
+  margin-top: 1.5em;
 }
 .toc {
   display: none;
@@ -824,71 +1379,50 @@ h1 {
  *  Footer
  */
 .footer {
-  margin-top: 4em;
-  padding-top: 1em;
+  margin-top: 3em;
+  padding-top: 22px;
   border-top: 2px solid #eee;
 }
-.site-footer {
-  background-color: #eee;
-  margin-top: 1em;
-  padding: 0.75em 0 1.25em;
-}
-.site-footer ul li {
-  padding: 0 0.5em;
-}
-.footer-column-wrapper {
-  width: 80%;
-  margin: 0 auto;
-}
 .footer-column ul {
+  list-style-type: square;
+}
+.site-footer {
+  text-align: center;
+  padding-bottom: 1.5em;
+  background-color: #eee;
+}
+.site-footer ul {
   margin: 0;
   padding: 0;
-  padding-left: 0.5em;
-  list-style-type: none;
+  list-type: none;
 }
-.footer-column ul li {
-  margin: 0.5em 0;
+.site-footer li {
+  display: inline;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
 }
-.footer-column-x {
-  text-align: left;
-  padding: 0 0.5em;
-}
+/** --------------------------------------------------------------
+ *  Media Queries
+ */
 @media screen and (min-width: 610px) {
   .toc {
     display: block;
     list-style-type: none;
   }
-  .footer-column-wrapper {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .footer-column {
-    width: 32%;
-    margin: 0 0.25em;
-  }
 }
 @media screen and (min-width: 640px) {
   .flash-wrap {
-    height: 140px;
+    height: 143px;
   }
   .flash-wrap img {
     padding-top: 10px;
     width: 260px;
     height: auto;
   }
-  .main,
-  .after-main,
-  .sidebar {
-    margin: 1em 0;
-    padding: 1em;
-  }
-  .footer-column-1 {
-    padding-left: 1em;
-  }
 }
 @media screen and (min-width: 760px) {
-  .site-logo-text {
-    padding-top: 0.2em;
+  .site-header {
+    height: 4.5em;
   }
   .rm-navbar-max {
     display: none;
@@ -896,45 +1430,47 @@ h1 {
   .navbar2 {
     text-align: right;
     display: block;
-    width: 49%;
-    float: right;
+    float: left;
+    height: 3em;
+    padding-top: 16px;
+  }
+  .rm-desktop ul {
+    margin: 0;
+    padding: 0;
   }
   .rm-desktop li a {
     font-weight: 300;
+    line-height: 1.3333;
     text-transform: uppercase;
     color: #80A59A;
   }
   .rm-desktop li a:hover {
     color: #DE9B88;
   }
+  .rm-default a {
+    padding: 0 1.5em 0 0;
+  }
+  .rm-default li:last-child a {
+    padding-right: 0;
+  }
   .flash-wrap {
     clear: both;
-    height: 160px;
+    height: 167px;
   }
   .flash-wrap img {
     padding-top: 10px;
     width: 300px;
     height: auto;
   }
-}
-@media screen and (min-width: 960px) {
-  .main {
-    display: inline-block;
-    width: 60%;
-    float: left;
-    margin-right: 1em;
+  .main,
+  .sidebar {
+    padding-top: 3em;
   }
-  .sidebar-right {
-    display: inline-block;
-    width: 30%;
-    float: right;
+  .sidebar-right p img {
+    margin-top: 3em;
+    width: 100%;
   }
-  .sidebar-left {
-    display: inline-block;
-    width: 30%;
-    float: left;
-  }
-  .after-main {
-    clear: both;
+  .footer {
+    margin-top: 4.5em;
   }
 }
