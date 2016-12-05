@@ -1,0 +1,66 @@
+/** 
+* Anax Flat theme.
+*/
+@import url(modules.less);
+@import url(base.less);
+
+@bgColor: #E8F2E8;
+@wrapAllColor: #FFF;
+@textColor: #444;
+@linkColor: #5FB78C;
+@linkHoverColor: #DD8E73;
+@linkVisitedColor: #71A58C;
+
+@maxButtonColor: #444;
+@navbarMenuButtonClickedColor: #71A58C;
+@maxBgColor: #F9F9F9;
+
+@footerBgColor: #EEE;
+
+.wrap-all {
+    background-color: @wrapAllColor;
+}
+
+a {
+    text-decoration: none;
+    color: @linkColor;
+    &:visited {
+        color: @linkVisitedColor;
+    }
+    &:hover {
+        color: @linkHoverColor;
+        text-decoration: underline;
+    } 
+}
+
+.site-logo-text {
+    a {
+        color: @linkColor;
+        text-decoration: none;
+    }
+}
+
+.inner-wrap-footer {
+    border-top: 1px solid @bgColor;
+}
+
+.site-footer {
+    background-color: @footerBgColor;
+
+}
+
+
+@media screen and (min-width: 840px) {
+
+.rm-desktop li a {
+    font-weight: 300;
+    line-height: 1.3333;
+    text-transform: uppercase;
+    color: @linkColor;
+    &:hover {
+       color: @linkHoverColor;
+       background-color: @bgColor;
+    }
+}
+
+}

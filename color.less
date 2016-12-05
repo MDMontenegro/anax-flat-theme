@@ -1,0 +1,134 @@
+/** 
+* Anax Flat theme.
+*/
+@import url(modules.less);
+@import url(base.less);
+
+/***  @magicNumberLayout, bas mått som layouten är byggd efter ***/
+/***  @magicNumber används i typografin ***/
+//@magicNumber:   24px;
+@magicNumberLayout: 1.5em; // samma som 24px
+
+@bgColor: #FFEEDD;
+@wrapAllColor: #FFFCF6;
+@logoColor: #C98763;
+@textColor: #423D35;
+@headingColor: #C98763;
+
+@linkColor: #938775;
+@linkHoverColor: #786E5F;
+@linkHoverBg: #FFFCF6;
+@linkVisitedColor: #786E5F;
+
+@maxButtonColor: #938775;
+@maxButtonFontSize: 2em;
+@navbarMenuButtonClickedColor: #786E5F;
+@maxBgColor: #FFFCF6;
+
+@footerBgColor: #FFFCF6;
+
+
+body {
+    background-color: @bgColor;
+    color: @textColor;
+}
+
+.wrap-all {
+    background-color: @wrapAllColor;
+}
+a {
+    color: @linkColor;
+    &:visited {
+        color: @linkVisitedColor;
+    }
+    &:hover {
+        color: @linkHoverColor;
+        font-weight: 600;
+        text-decoration: underline;
+    } 
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: @headingColor;
+}
+
+
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+.site-header {
+    
+}
+
+.site-logo-text {
+    a {
+        color: @logoColor;
+        text-decoration: none;
+        &:hover {
+            font-weight: 300;
+        }
+    }
+}
+
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+
+
+
+
+
+/** --------------------------------------------------------------
+ *  Main
+ */
+
+
+
+
+
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+
+.site-footer {
+    background-color: @footerBgColor;
+}
+
+
+
+/** --------------------------------------------------------------
+ *  Media Queries
+ */
+ 
+@media screen and (min-width: 610px) {
+
+
+
+}
+
+
+@media screen and (min-width: 640px) {
+
+
+
+}
+
+@media screen and (min-width: 840px) {
+
+.rm-desktop li a {
+    font-weight: 300;
+    line-height: 1.3333;
+    text-transform: uppercase;
+    color: @linkColor;
+    &:hover {
+       color: @linkHoverColor;
+       background-color: @linkHoverBg;
+    }
+}
+
+}
+
