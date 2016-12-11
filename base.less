@@ -110,13 +110,38 @@ body {
  *  Main
  */
 
-.main, .after-main, .sidebar {
+/*.main, .after-main, .sidebar {
     padding-top: @magicNumberLayout;
     img {
         max-width: 260px;
         padding: 0;
         margin: 0 auto;
     }
+}*/
+
+.blog-list-item {
+    padding-top: 24px;
+    border-top: 1px solid #EEE;
+    h2 {
+        margin-top: 24px;
+    }
+}
+
+.blog-post {
+    .figure {
+        margin-top: 46px; // minus border
+    }
+}
+
+.route-index, .route-about {
+    .main, .after-main, .sidebar {
+        padding-top: @magicNumberLayout;
+    img {
+        max-width: 260px;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
 }
 fieldset select {
     max-width: 300px;

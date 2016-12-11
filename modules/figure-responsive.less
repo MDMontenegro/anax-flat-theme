@@ -1,0 +1,143 @@
+/** --------------------------------------------------------------
+ * Figure through .figure
+ */
+@magicNumber: 24px;
+
+.figure {
+    display: table;
+    padding: 0;
+    margin: 0;
+    margin-bottom: @magicNumber - 2px;
+    border: 2px solid #444;
+
+    a {
+        
+    }
+
+    img {
+        max-width: 100%; // Make images responsive
+        display: block;
+    }
+
+    figcaption {
+        display: table-caption;
+        caption-side: bottom;
+        padding-top: @magicNumber / 2;
+
+        p {
+            margin-top: 0;
+        }
+    }
+
+    /* Chrome shinks images in td */
+    td img {
+        max-width: none;
+    }
+
+    /* Position the images */
+    &.w75 {
+        max-width: 100%;
+    }
+    &.w50 {
+        max-width: 100%;
+    }
+    &.w25 {
+        max-width: 100%;
+    }
+
+    &.left,
+    &.right {
+        float: none;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    &.center {
+        clear: both;
+        max-width: 100%;
+        margin: 0;
+
+        figcaption {
+            text-align: center;
+        }
+    }       
+
+    @media screen {
+        @media (min-width: 500px) {
+            &.left {
+                float: left;
+                margin-right: 8px;
+            }
+
+            &.right {
+                float: right;
+                margin-left: 8px;
+            }
+
+            &.center {
+                clear: both;
+                margin: auto;
+
+                figcaption {
+                    text-align: center;
+                }
+            }
+            &.w75 {
+                width: 240px;
+            }
+            &.w50 {
+                width: 210px;
+            }
+            &.w25 {
+                width: 180px;
+            }
+        }
+
+        @media (min-width: 600px) {
+            &.w75 {
+                width: 280px;
+            }
+            &.w50 {
+                width: 250px;
+            }
+            &.w25 {
+                width: 220px;
+            }
+        }
+
+        @media (min-width: 700px) {
+            &.w75 {
+                width: 340px;
+            }
+            &.w50 {
+                width: 300px;
+            }
+            &.w25 {
+                width: 260px;
+            }
+        }
+
+        @media (min-width: 800px) {
+            &.w75 {
+                width: 395px;
+            }
+            &.w50 {
+                width: 345px;
+            }
+            &.w25 {
+                width: 295px;
+            }
+        }
+
+        @media (min-width: 960px) {
+            &.w75 {
+                width: 500px; 
+            }
+            &.w50 {
+                width: 420px;
+            }
+            &.w25 {
+                width: 340px;
+            }
+        }
+    }
+}
