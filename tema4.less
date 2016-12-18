@@ -1,0 +1,138 @@
+/** 
+* Anax Flat theme.
+*/
+@import url(modules.less);
+@import url(base.less);
+
+/***  @magicNumberLayout, bas mått som layouten är byggd efter ***/
+/***  @magicNumber används i typografin ***/
+//@magicNumber:   24px;
+@magicNumberLayout: 1.5em; // samma som 24px
+
+@bgColor: #FFF;
+@wrapAllColor: #FFF;
+
+@logoColor: #000;
+@logoColorBg: #FF8A0D;
+
+@textColor: #444;
+@headingColor: #000;
+@headingColorBg: #FFF;
+
+@navColor: #444;
+@navHoverColor: #444;
+
+@linkColor: #2693E5;
+@linkHoverColor: #15517F;
+@linkVisitedColor: #0F3959;
+
+@maxButtonColor: #2693E5;
+@maxButtonFontSize: 2em;
+@navbarMenuButtonClickedColor: #0F3959;
+@maxBgColor: #FFF;
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    background: url("../img/paper.jpg") no-repeat left top;
+    background-size: cover;
+    color: @textColor;
+}
+
+.wrap-all {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+a {
+    color: @linkColor;
+    text-decoration: none;
+    &:visited {
+        color: @linkVisitedColor;
+    }
+    &:hover {
+        color: @linkHoverColor;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.5);
+    } 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Arvo', serif;
+    font-weight: 400;
+    color: @headingColor;
+    border: 2px solid @wrapAllColor;
+    background: rgba(255, 255, 255, 0.2);
+    padding-left: 0.75em;
+}
+
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+.site-logo-text {
+    a {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        color: @logoColor;
+        text-decoration: none;
+        padding: 0 0.275em;
+        &:hover {
+            font-weight: 300;
+            font-style: normal;
+        }
+    }
+}
+
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+ 
+/** --------------------------------------------------------------
+ *  Main
+ */
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+
+.site-footer {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+
+/** --------------------------------------------------------------
+ *  Media Queries
+ */
+ 
+@media screen and (min-width: 610px) {
+}
+@media screen and (min-width: 640px) {
+}
+
+@media screen and (min-width: 900px) {
+
+/*.navbar2 {
+    padding-top: 21px;
+}*/
+
+.rm-desktop li a {
+    font-weight: 300;
+    font-size: 0.875em;
+    line-height: 1.2143;
+    text-transform: uppercase;
+    color: @navColor;
+    border: 2px solid @wrapAllColor;
+    &:hover {
+       text-decoration: none;
+       font-style: normal;
+       color: @navHoverColor;
+       background-color: @wrapAllColor;
+       border: 2px solid @wrapAllColor;
+    }
+}
+
+}

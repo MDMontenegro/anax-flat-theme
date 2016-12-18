@@ -1,0 +1,142 @@
+/** 
+* Anax Flat theme.
+*/
+@import url(modules.less);
+@import url(base.less);
+
+/***  @magicNumberLayout, bas mått som layouten är byggd efter ***/
+/***  @magicNumber används i typografin ***/
+//@magicNumber:   24px;
+@magicNumberLayout: 1.5em; // samma som 24px
+
+@bgColor: #F6F6EC;
+@wrapAllColor: #FFF;
+
+@logoColor: #000;
+@textColor: #222;
+@headingColor: #008687;
+
+@navColor: #1C8FAB;
+@navHoverColor: #125C6E;
+
+@linkColor: #1C8FAB;
+@linkHoverColor: #125C6E;
+@linkVisitedColor: #0F3959;
+
+@maxButtonColor: #1C8FAB;
+@maxButtonFontSize: 2em;
+@navbarMenuButtonClickedColor: #0F3959;
+@maxBgColor: #FFF;
+
+
+body {
+    color: @textColor;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    background: url(../img/palms.png) left bottom repeat-x;
+    background-size: 35px;
+    background-color: @bgColor;
+}
+
+.wrap-all {
+    background: rgba(255, 255, 255, 0.3);
+    padding-bottom: 48px;
+}
+
+a {
+    color: @linkColor;
+    text-decoration: none;
+    &:visited {
+        color: @linkVisitedColor;
+    }
+    &:hover {
+        color: @linkHoverColor;
+        text-decoration: none;
+        border-bottom: 2px solid @linkHoverColor;
+    } 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Arvo', serif;
+    font-weight: 400;
+    color: @headingColor;
+}
+
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+.site-logo-text {
+    a {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        color: @logoColor;
+        text-decoration: none;
+        padding: 0 0.275em;
+        &:hover {
+            font-weight: 300;
+            font-style: normal;
+            border: 0;
+        }
+    }
+}
+
+.inner-wrap-flash {
+    background-color: #fff;
+    .flash-img {
+        width: 100%;
+        height: 167px;
+		padding: 0;
+        background: url(../img/trees.jpg) no-repeat;
+        background-position: 2% 50%;
+        background-size: 100%;
+    }
+}
+
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+ 
+/** --------------------------------------------------------------
+ *  Main
+ */
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+
+
+/** --------------------------------------------------------------
+ *  Media Queries
+ */
+ 
+@media screen and (min-width: 610px) {
+}
+@media screen and (min-width: 640px) {
+}
+
+@media screen and (min-width: 900px) {
+
+/*.navbar2 {
+    padding-top: 21px;
+}*/
+
+.rm-desktop li a {
+    font-weight: 300;
+    font-size: 0.875em;
+    line-height: 1.2143;
+    text-transform: uppercase;
+    color: @navColor;
+    background-color: #F9F9F2; 
+    &:hover {
+       text-decoration: none;
+       font-style: normal;
+       color: @navHoverColor;
+       background-color: #F9F9F2;
+       border-bottom: 2px solid @navHoverColor;
+    }
+}
+
+}

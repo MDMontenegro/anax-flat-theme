@@ -1,0 +1,165 @@
+/** 
+* Anax Flat theme.
+*/
+@import url(modules.less);
+@import url(base.less);
+
+/***  @magicNumberLayout, bas mått som layouten är byggd efter ***/
+/***  @magicNumber används i typografin ***/
+//@magicNumber:   24px;
+@magicNumberLayout: 1.5em; // samma som 24px
+
+@bgColor: #FFF;
+@wrapAllColor: #FFF;
+
+@logoColor: #FFFFD3;
+
+@textColor: #444;
+@headingColor: #FFF;
+
+@navColor: #222;
+@navHoverColor: #FCFFD3;
+
+@borderColor: #FCFFD3;
+
+@linkColor: #222;
+@linkHoverColor: #FCFFD3;
+@linkVisitedColor: #555;
+
+@maxButtonColor: #222;
+@maxButtonFontSize: 2em;
+@navbarMenuButtonClickedColor: #555;
+@maxBgColor: #FFF;
+
+body {
+    background-color: @bgColor;
+    color: @textColor;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
+.wrap-all {
+    .container();
+    max-width: 99%;
+    margin: 0 auto;
+}
+
+body, .wrap-all {
+    background-color: @wrapAllColor;
+    background: #fff;
+    background: -webkit-linear-gradient(left top, rgba(171,240,247,0.3),rgba(144,218,227,1));
+    background: -o-linear-gradient(bottom right, rgba(171,240,247,0.3),rgba(144,218,227,1));
+    background: -moz-linear-gradient(bottom right, rgba(171,240,247,0.3),rgba(144,218,227,1));
+    background: linear-gradient(to bottom right, rgba(171,240,247,0.3),rgba(144,218,227,1));
+}
+
+a {
+    color: @linkColor;
+    text-decoration: none;
+    padding: 0 0.25em;
+    border-bottom: 1px solid @borderColor;
+    &:visited {
+        color: @linkVisitedColor;
+    }
+    &:hover {
+        color: @linkHoverColor;
+        border-bottom: 2px solid @borderColor;
+        text-decoration: none;
+    } 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Arvo', serif;
+    font-weight: 400;
+    color: @headingColor;
+    padding-left: 0.75em;
+    background: #fff;
+    background: -webkit-linear-gradient(left top, rgba(252,242,198,0.1),rgba(248,241,215,0.8));
+    background: -o-linear-gradient(bottom right, rgba(252,242,198,0.1),rgba(248,241,215,0.8));
+    background: -moz-linear-gradient(bottom right, rgba(252,242,198,0.1),rgba(248,241,215,0.8));
+    background: linear-gradient(to bottom right, rgba(252,242,198,0.1),rgba(248,241,215,0.8));
+}
+
+
+
+/** --------------------------------------------------------------
+ *  Header
+ */
+
+.inner-wrap-flash {
+    background-color: #fff;
+    .flash-img {
+        width: 100%;
+        height: 167px;
+		padding: 0;
+        background: url(../img/flash-alt3.jpg) no-repeat;
+        background-position: 2% 50%;
+        background-size: 100%;
+    }
+    
+}
+
+.site-logo-text {
+    a {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 300;
+        color: @logoColor;
+        text-decoration: none;
+        border-bottom: 0;
+        padding: 0 0.275em;
+        &:hover {
+            font-weight: 300;
+            font-style: normal;
+        }
+    }
+}
+
+
+/** --------------------------------------------------------------
+ *  Breadcrumb
+ */
+
+/** --------------------------------------------------------------
+ *  Main
+ */
+
+/** --------------------------------------------------------------
+ *  Footer
+ */
+
+.site-footer {
+    background-color: transparent;
+}
+
+
+
+/** --------------------------------------------------------------
+ *  Media Queries
+ */
+ 
+@media screen and (min-width: 610px) {
+}
+@media screen and (min-width: 640px) {
+}
+
+@media screen and (min-width: 900px) {
+
+/*.navbar2 {
+    padding-top: 21px;
+}*/
+
+.rm-desktop li a {
+    font-weight: 300;
+    font-size: 0.875em;
+    line-height: 1.2143;
+    text-transform: uppercase;
+    color: @navColor;
+    
+    &:hover {
+        text-decoration: none;
+        font-style: normal;
+        color: @navHoverColor;
+    }
+}
+
+}
