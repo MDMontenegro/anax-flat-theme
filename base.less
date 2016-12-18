@@ -17,7 +17,6 @@
 @navbarMenuButtonClickedColor: #000;
 @maxBgColor: #FFF;
 
-//@mobileBgColor: #444;
 @mobileColor: #000;
 
 body {
@@ -70,17 +69,24 @@ body {
 }
 
 .inner-wrap-flash {
-    background-color: @flashBgColor;
+    background-color: @flashBgColor; 
 }
+
 .flash-wrap {
     text-align: center;
     height: 119px;
-    img {
-        padding-top: 10px;
-        width: 200px;
-        height: auto;
-    }
 }
+
+.flash-img {
+    padding-top: 30px;
+    width: 200px;
+    height: 80px;
+	margin: 0 auto;
+    background-image: url(../img/flash-img5.png);
+    background-repeat: no-repeat;
+	background-size: contain;
+}
+
 
 
 
@@ -225,9 +231,12 @@ fieldset select {
 
 .flash-wrap {
     height: 143px;
-    img {
-        width: 260px;
-    }
+}
+
+.flash-img {
+	//padding-top: 20px;
+	width: 260px;
+	height: 100px;
 }
 
 fieldset select {
@@ -266,7 +275,7 @@ fieldset select {
 }
 
 
-@media screen and (min-width: 840px) {
+@media screen and (min-width: 900px) {
 
 .site-header {
     height: @magicNumberLayout * 3;
@@ -284,6 +293,10 @@ fieldset select {
     padding-top: 16px;
 }
 
+.rm-default li li {
+    text-align: center;
+    min-width: 7em;
+}
 .rm-desktop ul {
     margin: 0;
     padding: 0;
@@ -302,9 +315,10 @@ fieldset select {
 .flash-wrap {
     clear: both;
     height: 167px;
-    img {
-        width: 300px;
-    }
+}
+.flash-img {
+	width: 300px;
+	height: 140px;
 }
 
 }

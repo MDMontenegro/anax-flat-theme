@@ -9,31 +9,31 @@
 //@magicNumber:   24px;
 @magicNumberLayout: 1.5em; // samma som 24px
 
-@bgColor: #444;
-@wrapAllColor: #444;
-@logoColor: #8373B6;
-@textColor: #f2f2f2;
-@headingColor: #FFF8C9;
+@bgColor: #FFF;
+@wrapAllColor: #FFF;
 
-@linkColor: #FFED95;
-@linkHoverColor: #FFF8C9;
-@linkHoverBg: transparent;
-@linkVisitedColor: #FFE771;
+@flashBgColor: #9EA79D;
 
-@maxButtonColor: #FFED95;
-@navbarMenuButtonClickedColor: #FFE771;
-@maxBgColor: #444;
+@logoColor: #FFF;
+@textColor: #444;
+@headingColor: #FFF;
+@headingColorBg: #000;
 
-@footerBgColor: #444;
+@linkColor: #000;
+@linkHoverColor: #FFF;
+@linkHoverBg: #000;
+@linkVisitedColor: #666;
 
+@maxButtonColor: #000;
+@maxButtonFontSize: 2em;
+@navbarMenuButtonClickedColor: #666;
+@maxBgColor: #FFF;
 
 body {
     background-color: @bgColor;
     color: @textColor;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: @headingColor;
+    background: url(../img/circle.png) right bottom no-repeat, url(../img/polygon.png) top left repeat;
+    background-size: 75px, 25px, auto;
 }
 
 .wrap-all {
@@ -46,13 +46,18 @@ a {
     }
     &:hover {
         color: @linkHoverColor;
+        background-color: @linkHoverBg;
+        font-weight: 600;
         text-decoration: underline;
     } 
 }
 
-body code {
-    background-color: #7D7D7D;
+h1, h2, h3, h4, h5, h6 {
+    color: @headingColor;
+    background-color: @headingColorBg;
+    padding-left: 0.75em;
 }
+
 
 
 /** --------------------------------------------------------------
@@ -62,7 +67,12 @@ body code {
 .site-logo-text {
     a {
         color: @logoColor;
+        background-color: @flashBgColor;
         text-decoration: none;
+        padding: 0 0.25em;
+        &:hover {
+            font-weight: 300;
+        }
     }
 }
 
@@ -70,30 +80,14 @@ body code {
  *  Breadcrumb
  */
 
-
-
-
-
 /** --------------------------------------------------------------
  *  Main
  */
-
-
-
-
-
 
 /** --------------------------------------------------------------
  *  Footer
  */
 
-.inner-wrap-footer {
-    border-top: 2px solid @bgColor;
-}
-
-.site-footer {
-    background-color: @footerBgColor;
-}
 
 
 
@@ -103,24 +97,24 @@ body code {
  
 @media screen and (min-width: 610px) {
 
-
-
 }
-
-
 @media screen and (min-width: 640px) {
-
-
 
 }
 
 @media screen and (min-width: 900px) {
 
+/*.navbar2 {
+    padding-top: 21px;
+}*/
+
 .rm-desktop li a {
     font-weight: 300;
-    line-height: 1.3333;
+    font-size: 0.875em;
+    line-height: 1.2143;
     text-transform: uppercase;
     color: @linkColor;
+    background-color: @wrapAllColor;
     &:hover {
        color: @linkHoverColor;
        background-color: @linkHoverBg;
@@ -128,4 +122,3 @@ body code {
 }
 
 }
-

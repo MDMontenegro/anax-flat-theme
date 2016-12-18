@@ -9,31 +9,30 @@
 //@magicNumber:   24px;
 @magicNumberLayout: 1.5em; // samma som 24px
 
-@bgColor: #444;
-@wrapAllColor: #444;
-@logoColor: #8373B6;
-@textColor: #f2f2f2;
-@headingColor: #FFF8C9;
+@bgColor: #FFF;
+@wrapAllColor: #FFF;
 
-@linkColor: #FFED95;
-@linkHoverColor: #FFF8C9;
-@linkHoverBg: transparent;
-@linkVisitedColor: #FFE771;
+@logoColor: #000;
 
-@maxButtonColor: #FFED95;
-@navbarMenuButtonClickedColor: #FFE771;
-@maxBgColor: #444;
+@textColor: #444;
+@headingColor: #000;
+@headingColorBg: #FFF;
 
-@footerBgColor: #444;
+@navColor: #444;
+@navHoverColor: #444;
 
+@linkColor: #2693E5;
+@linkHoverColor: #15517F;
+@linkVisitedColor: #0F3959;
+
+@maxButtonColor: #2693E5;
+@maxButtonFontSize: 2em;
+@navbarMenuButtonClickedColor: #0F3959;
+@maxBgColor: #FFF;
 
 body {
-    background-color: @bgColor;
+    background:repeating-linear-gradient(-45deg, #777, #ccc 10px, white 10px, white 20px);
     color: @textColor;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: @headingColor;
 }
 
 .wrap-all {
@@ -41,17 +40,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 a {
     color: @linkColor;
+    text-decoration: none;
     &:visited {
         color: @linkVisitedColor;
     }
     &:hover {
         color: @linkHoverColor;
-        text-decoration: underline;
+        font-weight: 600;
+        text-decoration: none;
+        font-style: italic;
     } 
 }
 
-body code {
-    background-color: #7D7D7D;
+h1, h2, h3, h4, h5, h6 {
+    color: @headingColor;
+    background-color: @headingColorBg;
+    padding-left: 0.75em;
+    font-style: italic;
 }
 
 
@@ -63,37 +68,26 @@ body code {
     a {
         color: @logoColor;
         text-decoration: none;
+        padding: 0 0.275em;
+        &:hover {
+            font-weight: 300;
+            font-style: normal;
+        }
     }
 }
+
 
 /** --------------------------------------------------------------
  *  Breadcrumb
  */
 
-
-
-
-
 /** --------------------------------------------------------------
  *  Main
  */
 
-
-
-
-
-
 /** --------------------------------------------------------------
  *  Footer
  */
-
-.inner-wrap-footer {
-    border-top: 2px solid @bgColor;
-}
-
-.site-footer {
-    background-color: @footerBgColor;
-}
 
 
 
@@ -102,30 +96,30 @@ body code {
  */
  
 @media screen and (min-width: 610px) {
-
-
-
 }
-
-
 @media screen and (min-width: 640px) {
-
-
-
 }
 
 @media screen and (min-width: 900px) {
 
+/*.navbar2 {
+    padding-top: 21px;
+}*/
+
 .rm-desktop li a {
     font-weight: 300;
-    line-height: 1.3333;
+    font-size: 0.875em;
+    line-height: 1.2143;
     text-transform: uppercase;
-    color: @linkColor;
+    font-weight: 600;
+    color: @navColor;
+    background-color: @wrapAllColor;
     &:hover {
-       color: @linkHoverColor;
-       background-color: @linkHoverBg;
+       text-decoration: none;
+       font-style: normal;
+       color: @navHoverColor;
+       background:repeating-linear-gradient(-45deg, #aaa, #ccc 2px, white 2px, white 4px);
     }
 }
 
 }
-

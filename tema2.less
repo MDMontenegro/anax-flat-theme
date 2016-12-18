@@ -9,23 +9,29 @@
 //@magicNumber:   24px;
 @magicNumberLayout: 1.5em; // samma som 24px
 
-@bgColor: #FFEEDD;
-@wrapAllColor: #FFFCF6;
-@logoColor: #C98763;
-@textColor: #423D35;
-@headingColor: #C98763;
+@bgColor: #fff;
+@wrapAllColor: #fff;
 
-@linkColor: #938775;
-@linkHoverColor: #786E5F;
-@linkHoverBg: #FFFCF6;
-@linkVisitedColor: #786E5F;
+@logoColor: #FFF;
+@logoColorBg: #FF8A0D;
 
-@maxButtonColor: #938775;
+@textColor: #444;
+@headingColor: #000;
+@headingColorBg: #FFF;
+
+@navColor: #FFF;
+@navColorBg: #2693E5;
+@navHoverColor: #FFF;
+@navHoverBg: #15517F;
+
+@linkColor: #2693E5;
+@linkHoverColor: #15517F;
+@linkVisitedColor: #0F3959;
+
+@maxButtonColor: #2693E5;
 @maxButtonFontSize: 2em;
-@navbarMenuButtonClickedColor: #786E5F;
-@maxBgColor: #FFFCF6;
-
-@footerBgColor: #FFFCF6;
+@navbarMenuButtonClickedColor: #0F3959;
+@maxBgColor: #FFF;
 
 
 body {
@@ -38,18 +44,21 @@ body {
 }
 a {
     color: @linkColor;
+    text-decoration: none;
     &:visited {
         color: @linkVisitedColor;
     }
     &:hover {
         color: @linkHoverColor;
         font-weight: 600;
-        text-decoration: underline;
+        text-decoration: none;
     } 
 }
 
 h1, h2, h3, h4, h5, h6 {
     color: @headingColor;
+    background-color: transparent;
+    padding-left: 0.75em;
 }
 
 
@@ -58,14 +67,12 @@ h1, h2, h3, h4, h5, h6 {
  *  Header
  */
 
-.site-header {
-    
-}
-
 .site-logo-text {
     a {
         color: @logoColor;
+        background-color: @logoColorBg;
         text-decoration: none;
+        padding: 0 0.275em;
         &:hover {
             font-weight: 300;
         }
@@ -77,27 +84,42 @@ h1, h2, h3, h4, h5, h6 {
  *  Breadcrumb
  */
 
-
-
-
-
 /** --------------------------------------------------------------
  *  Main
  */
 
+.inner-wrap-main .row {
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+}
+.inner-wrap-after-main .row {
+    border-left: 1px solid #444;
+    border-right: 1px solid #444;
+}
 
-
-
+.sidebar .figure {
+    margin-top: 47px;
+}
 
 
 /** --------------------------------------------------------------
  *  Footer
  */
 
-.site-footer {
-    background-color: @footerBgColor;
+.footer {
+    padding-top: 23px;
 }
 
+.site-footer {
+    border: 1px solid #444;
+}
+
+.footer-column-x  {
+    border: 1px solid #444;
+    padding: 0.5em;
+    min-height: 235px;
+    margin-bottom: 1.5em
+}
 
 
 /** --------------------------------------------------------------
@@ -105,30 +127,28 @@ h1, h2, h3, h4, h5, h6 {
  */
  
 @media screen and (min-width: 610px) {
-
-
-
 }
-
-
 @media screen and (min-width: 640px) {
-
-
-
 }
 
 @media screen and (min-width: 900px) {
 
+.navbar2 {
+    padding-top: 21px;
+}
+
 .rm-desktop li a {
     font-weight: 300;
-    line-height: 1.3333;
+    font-size: 0.875em;
+    line-height: 1.2143;
     text-transform: uppercase;
-    color: @linkColor;
+    color: @navColor;
+    background-color: @navColorBg;
     &:hover {
-       color: @linkHoverColor;
-       background-color: @linkHoverBg;
+       color: @navHoverColor;
+       background-color: @navHoverBg;
+       text-decoration: none;
     }
 }
 
 }
-
